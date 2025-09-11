@@ -58,7 +58,9 @@ docker build -t remove_bg_app .
 ```sh
 docker run -p 5000:5000 -v $(pwd)/uploads:/app/uploads -v $(pwd)/output:/app/output remove_bg_app
 ```
-
+```powershell
+docker run -p 5000:5000 -v "${PWD}.Path\uploads:/app/uploads" -v "${PWD}.Path\output:/app/output" remove_bg_app
+```
 ---
 
 ## Structure du projet
