@@ -1,1 +1,10 @@
 rbg/
+output/
+uploads/
+test.py
+__pycache__/
+*.pyc
+instance/
+.env
+
+
