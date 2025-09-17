@@ -4,7 +4,7 @@ import os
 
 app = Flask(__name__)
 
-# Configuration des dossiers pour stocker les fichiers uploadés et traités
+# Configuration des dossiers pour stocker  les fichiers uploadés et traités.
 UPLOAD_FOLDER = 'uploads'
 OUTPUT_FOLDER = 'output'
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
