@@ -4,6 +4,7 @@ pipeline {
     environment {
         IMAGE_NAME = "bbabadara/remove_bg_app"
         IMAGE_TAG = "latest"
+        DOCKER_REGISTRY = "docker.io"
     }
 
     stages {
