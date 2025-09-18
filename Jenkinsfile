@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        IMAGE_NAME = "bbabadara/remove_bg_app/"
+        IMAGE_NAME = "bbabadara/remove_bg_app"
         IMAGE_TAG = "latest"
     }
 
