@@ -30,6 +30,19 @@ pipeline {
                 }
             }
         }
+        
+        stage('Deploy to Render') {
+            steps {
+                withCredentials([string(credentialsId: 'render_credential', variable: 'RENDER_API_KEY')]) {
+                    sh '''
+                    curl -X POST "https://api.render.com/deploy/srv-xxxxxxxxxxxxxxxx" \
+                    -H "Authorization: Bearer $RENDER_API_KEY" \
+                    -H "Content-Type: application/json" \
+                    -d '{"clearCache": true}'
+                    '''
+                }
+            }
+        }
 
        
     }
