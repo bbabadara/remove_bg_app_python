@@ -33,7 +33,7 @@ pipeline {
         
         stage('Deploy to Render') {
             steps {
-                withCredentials([string(credentialsId: 'render_credential', variable: 'RENDER_API_KEY')]) {
+                withCredentials([string(credentialsId: 'render_api', variable: 'RENDER_API_KEY')]) {
                     sh '''
                     curl -X POST "https://api.render.com/deploy/srv-d31ikver433s73f7g140" \
                     -H "Authorization: Bearer $RENDER_API_KEY" \
@@ -43,6 +43,7 @@ pipeline {
                 }
             }
         }
+        
 
        
     }
