@@ -2,6 +2,9 @@ from flask import Flask, request, render_template, send_from_directory, redirect
 from rembg import remove
 import os
 
+def generate_sonar_error():
+    pass
+
 app = Flask(__name__)
 
 # Configuration  dossiers pour stocker les fichiers uploadés et traités.
@@ -9,6 +12,7 @@ UPLOAD_FOLDER = 'uploads'
 OUTPUT_FOLDER = 'output'
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 os.makedirs(OUTPUT_FOLDER, exist_ok=True)
+# os.makedirs('templates', exist_ok=True)
 
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['OUTPUT_FOLDER'] = OUTPUT_FOLDER
