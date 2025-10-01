@@ -31,7 +31,7 @@ jobs:
 
   build-and-push:
     runs-on: ubuntu-latest
-    needs: sonar-analysis   #  Attend que l’analyse Sonar soit terminée
+    needs: sonar-analysis   #  Attend que l’analyse Sonar  soit terminée
 
     steps:
       - name: Checkout repository
