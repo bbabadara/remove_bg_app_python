@@ -27,7 +27,7 @@ jobs:
             -Dsonar.organization=${{ secrets.SONAR_ORG }}
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # fourni automatiquement par GitHub
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} #  fourni automatiquement par GitHub
 
   build-and-push:
     runs-on: ubuntu-latest
